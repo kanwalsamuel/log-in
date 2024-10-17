@@ -1,0 +1,190 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styling */
+  body {
+    font-family: 'Arial', sans-serif; /* Update with brand fonts */
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #0b2545; /* Blackstone dark blue */
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  h2 {
+    color: #da291c; /* University of London red */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  label {
+    margin: 10px 0 5px;
+    display: block;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0b2545; /* Blackstone dark blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #da291c; /* University of London red */
+  }
+  
+  #error-message {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  /* Spinner styles */
+  .spinner {
+    display: none;
+    margin: 20px auto;
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #0b2545; /* Dark blue for branding */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Dark Mode Styles */
+  body.dark-mode {
+    background-color: #222;
+    color: white;
+  }
+  
+  body.dark-mode .login-card {
+    background-color: #333;
+    border-color: #444;
+  }
+  
+  body.dark-mode input, body.dark-mode select {
+    background-color: #555;
+    color: white;
+  }
+  
+  body.dark-mode button {
+    background-color: #555;
+  }
+  
+  body.dark-mode button:hover {
+    background-color: #777;
+  }
+  
+  /* Dark Mode Toggle */
+  .toggle-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .toggle-label {
+    cursor: pointer;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  body.dark-mode .toggle-label {
+    color: #ddd;
+  }
+  
+  /* RESPONSIVENESS */
+  
+  /* For screens smaller than 768px (tablets and small laptops) */
+  @media (max-width: 768px) {
+    .login-card {
+      max-width: 90%; /* Adjust card width to fit smaller screens */
+      padding: 20px;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    input, select, button {
+      padding: 8px;
+      font-size: 1rem;
+    }
+  
+    .toggle-container {
+      top: 10px;
+      right: 10px;
+    }
+  
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border-width: 6px;
+    }
+  }
+  
+  /* For screens smaller than 480px (mobile devices) */
+  @media (max-width: 480px) {
+    .login-card {
+      max-width: 95%; /* Make it almost full-width on smaller devices */
+      padding: 15px;
+    }
+  
+    h2 {
+      font-size: 1.2rem;
+    }
+  
+    input, select, button {
+      padding: 6px;
+      font-size: 0.9rem;
+    }
+  
+    .spinner {
+      width: 30px;
+      height: 30px;
+      border-width: 5px;
+    }
+  
+    /* Hide the dark mode toggle label text for smaller screens */
+    .toggle-label {
+      font-size: 0.9rem;
+    }
+  }
+  

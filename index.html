@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="toggle-container">
+    <label class="toggle-label" for="darkModeToggle">🌙 Dark Mode</label>
+    <input type="checkbox" id="darkModeToggle">
+  </div>
+
+  <div class="login-container">
+    <div class="login-card">
+      <h2>Login to Blackstone Campus</h2>
+
+      <!-- Form starts here -->
+      <form id="loginForm">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required title="Your institution-issued username">
+        
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required title="Your password should contain at least 8 characters">
+        
+        <label for="role">Select Role</label>
+        <select id="role" name="role" title="Choose your login role (Admin/Student)">
+          <option value="admin">Admin</option>
+          <option value="student">Student</option>
+        </select>
+        
+        <button type="submit">Login</button>
+        <div id="error-message"></div>
+      </form>
+
+      <!-- Spinner for loading animation -->
+      <div class="spinner" id="spinner"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
